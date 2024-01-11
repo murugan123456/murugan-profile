@@ -1,0 +1,147 @@
+body{
+    height: 100%;
+    background:linear-gradient(to bottom,rgb(40, 231, 151),rgb(233, 230, 59)) ;
+    overflow: auto;
+    background-size:contain;
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body header{
+    display: grid;
+    max-width: 1400px;
+    max-height: 200px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: crimson;
+    font-weight: 600;
+    gap: 2rem;
+}
+body header .name{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 10px;
+}
+body header .name h2:first-child{
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: cyan;
+}
+body header .name h2:last-child{
+    margin-top: 25px;
+}
+body header .links ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    list-style: none;
+    max-width: 600px;
+    width: 100%;
+ }
+ body header .links ul li{
+    margin-top: 1rem;
+ }
+body header .links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: crimson;
+    position: relative;
+}
+body header .links ul li a::before,body header .links ul li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    transition: all 0.3s linear;
+    width: 100%;
+    background: deeppink;
+    border-radius: 5px;
+    transform: scaleX(0);
+}
+body header.links ul li a::before{
+    top: 5px;
+    right: 0;
+    transform-origin: left;
+}
+body header .links ul li a::after{
+    left: 0;
+    bottom: -5px;
+    transform-origin: right;
+}
+body header .links ul li a:hover::after,body header .links ul li a:hover::before{
+    transform: scaleX(1);
+}
+main .title{
+    font-size: 22px;
+    text-align: center;
+    color: red;
+    font-weight: 600;
+}
+main .des{
+    color: red;
+    font-weight: 600;
+    padding-left: 20px;
+}
+main h4{
+    font-size: 18px;
+    padding-left: 50px;
+    color: blue;
+    font-weight: 200;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+main h4 ul{
+    list-style:no;
+    line-height: 2rem;
+}
+#si,.op{
+    color: rgb(9, 97, 185);
+    padding-left: 20px;
+}
+.sample-images,.output-images{
+    max-width: 1300px;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(420px,1fr));
+    place-items: center;
+}
+figure img{
+    height: 250px;
+    width: 400px;
+    gap: 2rem;
+}
+figcaption{
+    color: rgb(134, 12, 12);
+}
+footer h3{
+    text-align: end;
+    padding: 5px 20px 30px 0px;
+}
+footer h3 a{
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+    font-size: 22px;
+    color: red;
+}
+footer h3 a::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: crimson;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transform: scaleX(0);
+    transition: all 0.3s linear;
+}
+footer h3 a:hover::after{
+    transform: scaleX(1);
+}
+
+
